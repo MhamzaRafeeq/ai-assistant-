@@ -111,38 +111,55 @@ class PdfService {
           pw.SizedBox(height: 20),
           pw.Text('Contractual Terms', style: heading2),
           pw.Text('some text for contractual terms'),
+          pw.SizedBox(height: 20),
 
           pw.Text('Signatures', style: heading2),
           pw.Row(
             children: [
               pw.Text('Client: name provided'),
+              pw.SizedBox(width: 50),
+              pw.Text('Date: Date Provided'),
 
-            ]
+            ],
+          ),pw.Row(
+            children: [
+              pw.Text('Contracter: name provided'),
+              pw.SizedBox(width: 50),
+              pw.Text('Date: Date Provided'),
+
+            ],
+          ),
+          pw.SizedBox(height: 20),
+          pw.Text('Witnesses', style: heading2),
+          pw.Row(
+            children: [
+              pw.Text('Witness1: name provided'),
+              pw.SizedBox(width: 50),
+              pw.Text('Address: Date Provided'),
+
+            ],
+          ),pw.Row(
+            children: [
+              pw.Text('Witenss2: name provided'),
+              pw.SizedBox(width: 50),
+              pw.Text('Address: Date Provided'),
+
+            ],
           ),
 
-
-
-          /// Force next page content
-          pw.Text(
-            'This content appears on the next page.',
-            style: const pw.TextStyle(fontSize: 16),
-          ),
         ],
       ),
     );
 
     /// Save PDF locally
     final dir = await getApplicationDocumentsDirectory();
-    final file = File('${dir.path}/sample_document.pdf');
+    final file = File('${dir.path}/contract.pdf');
     await file.writeAsBytes(await pdf.save());
 
     /// Share PDF
-    // await SharePlus.instance.share(
-    //   ShareParams(text: 'Here is your document', files: [XFile(file.path)]),
-    // );
-    // await Share.shareXFiles([
-    //   XFile(file.path),
-    // ], text: 'Here is your PDF document');
+    await SharePlus.instance.share(
+      ShareParams(text: 'Here is your document', files: [XFile(file.path)]),
+    );
 
     /// Print PDF
     await Printing.layoutPdf(
