@@ -1,4 +1,4 @@
-name: video
+name: ai_assistant_new
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.7.0
+  sdk: ^3.10.4
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -36,6 +36,15 @@ dependencies:
   cupertino_icons: ^1.0.8
   icons_launcher: ^3.0.3
   lottie: ^3.3.1
+  speech_to_text: ^7.3.0
+  http: ^1.6.0
+  image_picker: ^1.2.1
+  record: ^6.1.2
+  path_provider: ^2.1.5
+  pdf: ^3.11.3
+  fl_chart: ^1.0.0
+  printing: ^5.14.2
+  share_plus: ^12.0.1
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,4 @@
-# video
+# ai_assistant_new
 
 A new Flutter project.
 

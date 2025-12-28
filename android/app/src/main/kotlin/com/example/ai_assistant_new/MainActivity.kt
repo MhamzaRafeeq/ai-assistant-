@@ -1,4 +1,4 @@
-package com.example.video
+package com.example.ai_assistant_new
 
 import io.flutter.embedding.android.FlutterActivity
 

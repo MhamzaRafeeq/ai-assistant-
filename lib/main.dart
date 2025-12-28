@@ -5,7 +5,7 @@ import 'Screens/splash_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  // test 
+  // test
   runApp(AiAssistant());
 }
 
