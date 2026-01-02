@@ -1,3 +1,5 @@
+import 'package:ai_assistant_new/Screens/camera_functions.dart';
+import 'package:ai_assistant_new/models/phase_record.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'chart_screen.dart';
@@ -15,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 2), () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomeScreen())), );
+    Future.delayed(Duration(seconds: 2), () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => CameraFunctions())), );
   }
   @override
   Widget build(BuildContext context) {
