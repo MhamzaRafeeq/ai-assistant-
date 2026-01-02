@@ -26,7 +26,13 @@ class _CameraFunctionsState extends State<CameraFunctions> {
     setState(() {
       firstButtonText = 'Saving in progress...';
     });
-    await Gal.putImage(image.path);
+    try{
+      await Gal.putImage(image.path);
+      print('image is saved');
+    }catch(e){
+      print('error in image: $e');
+    }
+
     setState(() {
       firstButtonText = 'Pick Image From Camera';
     });
